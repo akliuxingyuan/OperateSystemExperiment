@@ -1,1 +1,1 @@
-UniversityExperiment Records
+University Course Records
