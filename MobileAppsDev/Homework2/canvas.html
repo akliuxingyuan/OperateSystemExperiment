@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript">
+                function draw(){
+                    var canvas = document.getElementById("canvas"),
+                        ctx = canvas.getContext("2d");
+                    ctx.fillStyle = "#cfcfcf";
+                    ctx.fillRect(0,0,400,300);
+                    var n = 0;
+                    var dx = 150;
+                    var dy = 150;
+                    var s = 100;
+                    ctx.beginPath();
+                    ctx.fillStyle = "cornflowergreen";
+                    ctx.strokeStyle = "#449d44";
+                    var x = Math.sin(0);
+                    var y = Math.cos(0);
+                    var dig = 11 * Math.PI / 15;
+                    for(var i=0; i<30; i++){
+                        var x = Math.sin(i * dig);
+                        var y = Math.cos(i * dig);
+                        ctx.lineTo(dx+x*s,dy+y*s);
+                    }
+                    ctx.closePath();
+                    ctx.fill();
+                    ctx.stroke();
+                }
+        </script>
+    </head>
+    <body onload="draw();">
+        <canvas id="canvas" width="300" height="300"></canvas>
+    </body>
+</html>
+
